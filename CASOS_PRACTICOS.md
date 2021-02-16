@@ -6,7 +6,7 @@
 
 # Servicio Asociado
 
-![1](./imagenes/1.png  "1")
+![1](./imagenes/1.PNG  "1")
 
 # Ficheros de configuración
 
