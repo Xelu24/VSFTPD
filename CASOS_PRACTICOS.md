@@ -41,6 +41,14 @@ Chmod 777 /srv/ftp/sugerencias
 
 ![3](./imagenes/virtual.png  "3")
 
+Htpasswd -cd ./ftpd.passwd usuariov
+Mkdir /etc/vsftpd
+Cp ftpd.passwd vsftpd
+Apt instal libpam-pwdfile
+Nano /etc/pam.d/vsftpd
+
+![4](./imagenes/vsftpd.png  "4")
+
 # Direcctivas Importantes
 
 write_enable=YES Nos permite escribir
