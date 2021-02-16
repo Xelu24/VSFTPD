@@ -1,22 +1,22 @@
-## VSFTPD
+# VSFTPD
 
-# Versión VSFTPD
+## Versión VSFTPD
 
 ![1](./imagenes/1.PNG  "1")
 
-# Usuario Creados en la Instalación
+## Usuario Creados en la Instalación
 
 ![2](./imagenes/2.PNG  "2")
 
-# Servicio Asociado
+## Servicio Asociado
 
 vsftpd.service
 
-# Ficheros de configuración
+## Ficheros de configuración
 
 /etc/vsftpd.conf
 
-# Usuarios Enjaulados
+## Usuarios Enjaulados
 
 Listen=YES
 Chroot_local_user=YES
@@ -27,7 +27,7 @@ Allow_writeable_chroot=YES
 Creamos el vsftpd.chroot_list
 Los que esten dentro de vsftpd.chroot_list no estarán enjaulados
 
-# Anonymous permiso de Lectura
+## Anonymous permiso de Lectura
 
 Write_enable=YES
 Local_umask=022
@@ -36,7 +36,7 @@ Chown -R ftp:nogroup /srv/ftp
 Chown -R ftp:nogroup /srv/ftp/sugerencias
 Chmod 777 /srv/ftp/sugerencias
 
-# Usuario virtual
+## Usuario virtual
 /etc/vsftpd.conf
 
 ![3](./imagenes/virtual.png  "3")
@@ -49,7 +49,20 @@ Nano /etc/pam.d/vsftpd
 
 ![4](./imagenes/vsftpd.png  "4")
 
-# Direcctivas Importantes
+Mkdir /etc/vsftpd/usersConf
+Echo “local_root=/srv/usuariov” >/etc/vsftpd/usersConf/usuariov
+Mkdir /srv/usuariov
+
+## OpenSSL
+
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt
+
+![5](./imagenes/ssl.png  "5")
+
+Para que deje entrar al usuario Anonymous hay que ponerle la directiva 
+Allow_anon_ssl=YES
+
+## Direcctivas Importantes
 
 write_enable=YES Nos permite escribir
 local_umask=022 Nos permite dar nuevos permisos
