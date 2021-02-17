@@ -29,6 +29,7 @@ Chroot_list_file=/etc/vsftpd.chroot_list
 Allow_writeable_chroot=YES
 
 Creamos el vsftpd.chroot_list
+
 Los que esten dentro de vsftpd.chroot_list no estarán enjaulados
 
 ## Anonymous permiso de Lectura
