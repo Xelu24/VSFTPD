@@ -30,9 +30,15 @@ Allow_writeable_chroot=YES
 
 Creamos el vsftpd.chroot_list
 
-Los que esten dentro de vsftpd.chroot_list no estarán enjaulados
+Los que esten dentro de vsftpd.chroot_list no estarán enjaulados.
 
 ## Anonymous permiso de Lectura
+
+Para esto solo hay que activar anonymous
+
+anonymous_enable=YES
+
+## Anonymous permiso de Escritura
 
 Write_enable=YES
 
