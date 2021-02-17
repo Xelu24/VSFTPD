@@ -63,7 +63,7 @@ Mkdir /etc/vsftpd
 
 Cp ftpd.passwd vsftpd
 
-Apt instal libpam-pwdfile
+Apt install libpam-pwdfile
 
 Nano /etc/pam.d/vsftpd
 
