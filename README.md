@@ -4,7 +4,7 @@
 
 [2.Comparativa con Proftpd](/COMPARATIVA_PROFTPD.md "diferencia")
 
-[3.Esquema](/ESQUEMA.md "Esquema")
+[3.Esquema de red](/ESQUEMA.md "Esquema")
 
 [4.Instalación](/INSTALACION.md "Instalacion")
 
