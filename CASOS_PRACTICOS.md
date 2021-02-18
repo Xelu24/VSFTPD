@@ -90,12 +90,14 @@ Echo “local_root=/srv/usuariov” >/etc/vsftpd/usersConf/usuariov
 
 Mkdir /srv/usuariov
 
+Hay que modificar el fichero poniendole required en vez de sufficient en la primera línea y comentar la segunda.
+
 ## OpenSSL
 
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/vsftpd.key -out /etc/ssl/certs/vsftpd.crt
 
 ![5](./imagenes/ssl.png  "5")
 
-Para que deje entrar al usuario Anonymous hay que ponerle la directiva 
+Para que deje entrar al usuario Anonymous hay que ponerle la directiva en /etc/vsftpd.conf
 
 Allow_anon_ssl=YES
