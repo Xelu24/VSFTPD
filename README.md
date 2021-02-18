@@ -2,7 +2,7 @@
 
 [1.Introducción](/INTRODUCCION.md "introduccion")
 
-[2.Diferencia con Apache](/COMPARATIVA_PROFTPD.md "diferencia")
+[2.Comparativa con Proftpd](/COMPARATIVA_PROFTPD.md "diferencia")
 
 [3.Esquema](/ESQUEMA.md "Esquema")
 
